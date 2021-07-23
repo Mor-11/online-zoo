@@ -1,0 +1,64 @@
+.wrapper__aside {
+  background-image: url(../../src/img/backgrounds/Toolbar.svg);
+  width: 111px;
+  height: 380px;
+  position: fixed;
+  top: 287px;
+}
+aside {
+  z-index: 2;
+  @media (max-width: 1400px) {
+    display: none;
+  }
+}
+.aside__butten {
+  @media (max-width: 1400px) {
+    background-image: url(../../src/img/backgrounds/animals.svg);
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    top: 287px;
+    left: 20px;
+  }
+}
+
+.aside-content {
+  left: 0px;
+  margin-top: 13px;
+  height: 352px;
+  width: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.aside-animal img {
+  cursor: pointer;
+  height: 64px;
+  width: 64px;
+  border: 2px solid $color-cards_animals;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.feed {
+  cursor: pointer;
+  height: 64px;
+  width: 64px;
+  border: 2px solid $color-cards_animals;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: $color-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    border: 2px solid $color-main;
+  }
+}
+
+.feed img {
+  height: 47px;
+  width: 38px;
+}

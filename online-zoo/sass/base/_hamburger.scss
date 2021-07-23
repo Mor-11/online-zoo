@@ -1,0 +1,37 @@
+%humburger-line {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-color: $color-text;
+  border-radius: 2px;
+  height: 2px;
+  width: 100%;
+}
+
+.humburger {
+  margin-right: 5px;
+  margin-bottom: 7px;
+  display: none;
+  position: relative;
+  width: 36px;
+  height: 22px;
+  @include max-madia-mobile {
+    display: inline-block;
+  }
+  &::after {
+    @extend %humburger-line;
+    top: 0;
+    left: 0;
+  }
+  &::before {
+    @extend %humburger-line;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.humburger__line {
+  @extend %humburger-line;
+  top: calc(50% - 1px);
+  left: 0;
+}

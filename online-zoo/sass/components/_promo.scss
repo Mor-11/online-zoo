@@ -1,0 +1,76 @@
+.promo {
+  height: 700px;
+  width: 100%;
+  top: 0;
+  background-image: url(../src/img/backgrounds/panda.png),
+    radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-x: 61%;
+  @include madia-tablet {
+    height: 700px;
+    width: 100%;
+    background-image: url(../src/img/backgrounds/panda_1200.png),
+      radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  @include madia-mobile {
+    height: 700px;
+    width: 100%;
+    background-image: url(../src/img/backgrounds/panda_640.png),
+      radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: 10%;
+  }
+  @include madia-mobilesmall {
+    height: 700px;
+    width: 100%;
+    background-image: url(../src/img/backgrounds/panda_320.png),
+      radial-gradient(71.89% 152.21% at 40.1% 50%, #b5e6ff 0%, #59c3fb 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__titli {
+    letter-spacing: 0.03em;
+    padding: 210px 0 25px 0;
+    width: 570px;
+    @include madia-mobile {
+      width: 72%;
+      padding: 150px 0 25px 0;
+    }
+    @include madia-mobilesmall {
+      width: 39%;
+    }
+  }
+  &_button {
+    padding-top: 26px;
+    padding-bottom: 140px;
+    @include madia-mobile {
+      padding-top: 4%;
+    }
+    @include madia-mobilesmall {
+      padding-top: 8%;
+    }
+  }
+}
+.button__img {
+  padding: 0 6px 0 27.5px;
+  @include madia-mobile {
+    padding-left: 6px;
+  }
+  @include madia-mobilesmall {
+    padding-left: 22px;
+  }
+}
+.button__text {
+  padding-right: 27.5px;
+  @include madia-mobile {
+    padding: 0px;
+  }
+  @include madia-mobilesmall {
+    padding-right: 8px;
+  }
+}

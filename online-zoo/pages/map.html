@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/map.css" />
+    <title>map</title>
+  </head>
+
+  <body>
+    <div class="drag-field">
+      <header class="centre">
+        <nav>
+          <ul class="nav__header">
+            <li>
+              <a href="../index.html">
+                <img class="logo" src="../src/img/logo.svg" alt="logo" />
+              </a>
+            </li>
+            <li>
+              <a class="about" href="../index.html">About</a>
+            </li>
+            <li>
+              <a class="map" href="">Map</a>
+            </li>
+            <li>
+              <a class="zoos" href="zoo/zoo-alligator.html">Zoos</a>
+            </li>
+            <li class="c-us">
+              <a class="contact-us" href="Contact-us.html">Contact us</a>
+            </li>
+            <li>
+              <a
+                class="design"
+                href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo"
+                >Design</a
+              >
+            </li>
+            <li>
+              <a class="burger" href=""><button></button></a>
+            </li>
+          </ul>
+        </nav>
+        <h1>Online Zoo</h1>
+      </header>
+
+      <main>
+        <div class="zoom-field">
+          <div class="all-map centre">
+            <figure class="map-animal eagle">
+              <figcaption>EAGLE</figcaption>
+              <div class="tooltip">
+                <a href="zoo/zoo-eagle.html">
+                  <img src="../src/img/aside/eagle.jpg" alt="eagle" />
+                </a>
+                <div class="tooltiptext">
+                  <span> EAGLE, California, USA </span>
+                </div>
+                <div class="smal-tooltip">
+                  <span>EAGLE,</span>
+                  <span> California, USA </span>
+                  <a href="zoo/zoo-eagle.html"><button>Watch online</button></a>
+                </div>
+              </div>
+            </figure>
+            <div class="map-text usa">USA</div>
+            <figure class="map-animal alligator">
+              <div class="tooltip">
+                <a href="zoo/zoo-alligator.html">
+                  <img src="../src/img/aside/alligator.jpg" alt="alligator" />
+                </a>
+                <div class="tooltiptext">
+                  <span> ALLIGATOR, Florida, USA </span>
+                </div>
+                <div class="smal-tooltip">
+                  <span>ALLIGATOR,</span>
+                  <span> Florida, USA</span>
+                  <a href="zoo/zoo-alligator.html"
+                    ><button>Watch online</button></a
+                  >
+                </div>
+              </div>
+              <figcaption>ALLIGATOR</figcaption>
+            </figure>
+
+            <div class="map-text drc">Eastern DRC</div>
+            <figure class="map-animal gorilla">
+              <div class="tooltip">
+                <a href="zoo/zoo-gorilla.html">
+                  <img src="../src/img/aside/gorilla.jpg" alt="gorilla" />
+                </a>
+                <div class="tooltiptext">
+                  <span> GORILLA, Eastern DRC </span>
+                </div>
+                <div class="smal-tooltip">
+                  <span>GORILLA,</span>
+                  <span> Eastern DRC </span>
+                  <a href="zoo/zoo-gorilla.html"><button>Watch online</button></a>
+                </div>
+              </div>
+              <figcaption>GORILLA</figcaption>
+            </figure>
+            <div class="map-text china">China</div>
+            <figure class="map-animal panda">
+              <div class="tooltip">
+                <a href="zoo/zoo-panda.html">
+                  <img src="../src/img/aside/panda.jpg" alt="panda" />
+                </a>
+                <div class="tooltiptext">
+                  <span> PANDA, China </span>
+                </div>
+                <div class="smal-tooltip">
+                  <span>PANDA,</span>
+                  <span> China</span>
+                  <a href="zoo/zoo-panda.html"><button>Watch online</button></a>
+                </div>
+              </div>
+              <figcaption>PANDA BEAR</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="map-button">
+          <button class="map-button__center">0</button>
+          <button class="map-button__minus">-</button>
+          <button class="map-button__plus">+</button>
+        </div>
+      </main>
+      
+<div class="form-feedback hidden" id="form-feedback">
+  <span class="close"></span>
+  <form class="feedback" action="">
+    <input class="name" type="text" placeholder="Name" id="name" required />
+    <input class="email" type="email" placeholder="Email" id="email" required />
+    <textarea
+      class="text-feedback"
+      placeholder="Your text here (300 max)"
+      id="text-feedback"
+      required
+    ></textarea>
+    <button class="button feedback__button invalid" type="submit" id="send">
+      Submit
+    </button>
+  </form>
+</div>
+<div class="cover hidden" id="cover"></div>
+
+<div class="popup_content hidden" id="popup_animal">
+  <span class="close_popup close"></span>
+  <form action="" id="popup_content">
+    <div class="popup" id="content_animal">
+      <select class="animal_selection">
+        <option selected>Alligator</option>
+        <option>Panda</option>
+        <option>Eagle</option>
+        <option>Gorilla</option>
+      </select>
+      <input
+        class="amount"
+        type="number"
+        placeholder="Amout"
+        min="0"
+        max="9999"
+        id="amount"
+        minlength="1"
+        maxlength="4"
+      />
+      <select class="currency">
+        <option selected>USD</option>
+        <option>EUR</option>
+      </select>
+      <textarea
+        class="your-text"
+        maxlength="280"
+        placeholder="Your text here"
+        id="your-text"
+      ></textarea>
+      <button class="button popup_button" id="next">Next</button>
+    </div>
+    <div class="popup-card hidden" id="content_card">
+      <input
+        class="card-number"
+        type="text"
+        placeholder="Сard Number"
+        pattern="[0-9]{16}"
+        minlength="16"
+        maxlength="16"
+        required
+      />
+      <input
+        class="card-date mm"
+        type="text"
+        placeholder="MM"
+        minlength="2"
+        maxlength="2"
+        required
+      />
+      <input
+        class="card-date yy"
+        type="text"
+        placeholder="YY"
+        minlength="2"
+        maxlength="2"
+        required
+      />
+      <input
+        class="card-name"
+        type="text"
+        placeholder="Сardholder Name"
+        required
+      />
+      <input
+        class="card-cvc"
+        type="text"
+        placeholder="CVC"
+        pattern="[0-9]{3}"
+        minlength="3"
+        maxlength="3"
+        required
+      />
+      <button type="submit" class="button popup_button" id="donate">
+        <span class="button__taxt">Donate</span>
+      </button>
+    </div>
+  </form>
+</div>
+<div class="cover hidden" id="popup_cover"></div>
+
+    <footer>
+      <div class="footer__bg">
+        <div class="footer__content centre">
+          <nav class="nav__footer">
+            <a href="../index.html">
+              <img class="logo" src="../src/img/logo.svg" alt="logo" />
+            </a>
+            <button class="footer__button footer-order__button" id="fotten_button">
+              Donate for volunteers
+            </button>
+            <ul class="footer__ul ul1">
+              <li class="ul__li1">
+                <a href="../index.html">About</a>
+              </li>
+              <li>
+                <a href="map.html">Map</a>
+              </li>
+            </ul>
+            <ul class="footer__ul">
+              <li class="ul__li1">
+                <a href="../pages/Contact-us.html">Contact us</a>
+              </li>
+              <li>
+                <a class="feedback"  id="feedback" href="" onclick="return false">Feedback</a>
+              </li>
+            </ul>
+            <ul class="ul__link">
+              <li>
+                <a href="https://www.instagram.com">
+                  <img src="../src/img/footer/Insta.svg" alt="instagram" />
+                </a>
+              </li>
+              <li>
+                <a  href="https://www.facebook.com">
+                  <img src="../src/img/footer/Facebook.svg" alt="facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com">
+                  <img src="../src/img/footer/Twitter.svg" alt="twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com">
+                  <img src="../src/img/footer/Youtube.svg" alt="youtube" />
+                </a>
+              </li>
+            </ul>
+
+            <ul class="content__lvl2 footer-order__logo-no-int">
+              <li>
+                <img
+                  title="Rolling Scopes School"
+                  class="logo-no-int logo-rsschool"
+                  src="../src/img/footer/logo_school.svg"
+                  alt="logo-rsschool"
+                />
+              </li>
+              <li>
+                <img
+                  title="Yem Digital"
+                  class="logo-no-int"
+                  src="../src/img/footer/logo_shool2.svg"
+                  alt="logo-designschool"
+                />
+              </li>
+            </ul>
+            <div class="copyrate content__lvl2 footer__text">
+              Copyright ©RSSchool and ©Yem Digital 2020 - 2021
+            </div>
+            <div class="content__lvl2 footer__text">Grigoreva Margarita</div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/feedback.js"></script>
+    <script src="../js/popup.js"></script>
+    <script src="../js/map.js"></script>
+  </body>
+</html>
+
+

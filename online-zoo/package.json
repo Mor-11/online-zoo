@@ -1,0 +1,18 @@
+{
+  "name": "online-zoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch sass/style.scss sass/style.css",
+    "map": "sass --watch sass/pages/map.scss pages/style/map.css",
+    "zoo-alligator":"sass --watch sass/pages/zoo-alligator.scss pages/style/zoo-alligator.css",
+    "zoo-panda":"sass --watch sass/pages/zoo-panda.scss pages/style/zoo-panda.css",
+    "zoo-eagle":"sass --watch sass/pages/zoo-eagle.scss pages/style/zoo-eagle.css",
+    "zoo-gorilla":"sass --watch sass/pages/zoo-gorilla.scss pages/style/zoo-gorilla.css",
+    "conctact-up": "sass --watch sass/pages/conctact-up.scss pages/style/conctact-up.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

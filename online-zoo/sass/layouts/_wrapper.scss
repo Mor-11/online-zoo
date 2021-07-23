@@ -1,0 +1,35 @@
+.wrapper {
+  max-width: $content-width;
+  margin: auto;
+  @include madia-tablet {
+    padding: 0 20px;
+  }
+
+  @include madia-mobilesmall {
+    padding: 0 10px;
+  }
+}
+.wrapper2 {
+  max-width: $content-width;
+  margin: auto;
+  @include min-madia-tablet {
+    padding: 0 10px;
+  }
+  @include madia-mobile {
+    padding: 0px 10px;
+  }
+  @media (max-width: 640px) {
+    padding: 0px;
+  }
+}
+.wrapper3 {
+  max-width: $content-width;
+  margin: auto;
+  @include madia-tablet {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 340px) {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,140 @@
+.zoo {
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  @media (max-width: 1199px) {
+    max-width: 1080px;
+  }
+  @media (max-width: 1051px) {
+    max-width: 780px;
+  }
+  @media (max-width: 800px) {
+    max-width: 630px;
+  }
+  @media (max-width: 620px) {
+    max-width: 414px;
+  }
+  @media (max-width: 433px) {
+    max-width: 320px;
+  }
+  &__title {
+    margin-top: 111px;
+  }
+  &__centre {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1160px;
+    flex-wrap: wrap;
+  }
+  &__slider-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding: 0px;
+    max-width: 1012px;
+  }
+  &__slider-img figure {
+    width: 233px;
+    height: 300px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-position: center;
+    @media (max-width: 800px) {
+      width: 187px;
+      height: 300px;
+    }
+    @media (max-width: 433px) {
+      width: 140px;
+      height: 300px;
+    }
+  }
+
+  &-panda {
+    background-image: url(./../src/img/zoo/panda.jpg);
+  }
+
+  &-aligator {
+    background-image: url(./../src/img/zoo/alligator.jpg);
+  }
+
+  &-gorila {
+    background-image: url(./../src/img/zoo/gorilla.jpg);
+    @media (max-width: 620px) {
+      display: none;
+    }
+  }
+
+  &-elephant {
+    background-image: url(./../src/img/zoo/elephant.jpg);
+    @media (max-width: 1051px) {
+      display: none;
+    }
+  }
+
+  &-polar-bear {
+    background-image: url(./../src/img/zoo/polar-bear.jpg);
+  }
+
+  &-eagle {
+    background-image: url(./../src/img/zoo/bald-eagle.jpg);
+  }
+
+  &-owl {
+    background-image: url(./../src/img/zoo/arctic-snowy-owl.jpg);
+    @media (max-width: 620px) {
+      display: none;
+    }
+  }
+
+  &-penguin {
+    background-image: url(./../src/img/zoo/penguin.jpg);
+    @media (max-width: 1051px) {
+      display: none;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+.slider-img__img-text {
+  font-family: "Roboto", sans-serif;
+  @include font($size: 18px, $weight: 400, $height: 21px);
+  padding-top: 15px;
+  font-style: initial;
+  text-align: center;
+  color: #ffffff;
+  @media screen and (max-width: 900px) {
+    .slider-img__img-text {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+.slider__arow-left,
+.slider__arow-right {
+  position: relative;
+  display: flex;
+  margin: 30px 10px 0 0;
+  background-image: url(./../src/img/button/left.svg);
+  height: 64px;
+  width: 64px;
+  @media (max-width: 1180px) {
+    order: 2;
+  }
+}
+
+.slider__arow-right {
+  transform: scale(-1, 1);
+  margin: 30px 0 0 10px;
+}
+
+.zoo__panda {
+  margin-top: 45px;
+  margin-bottom: 95px;
+}

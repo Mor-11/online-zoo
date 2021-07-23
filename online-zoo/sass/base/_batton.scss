@@ -1,0 +1,46 @@
+.button {
+  padding: 15px 60px;
+  @include font($height: 21px, $size: 18px, $weight: normal);
+  color: $color-text;
+  text-decoration: none;
+  background: $color-main;
+  border-radius: 30px;
+  border: none;
+  &:hover {
+    @extend %transition;
+    background: radial-gradient($color-main, $color-button);
+    outline: none;
+  }
+  @include madia-mobilesmall {
+    padding: 15px 66px;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+.arrows {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  &:hover,
+  &:focus {
+    outline: none;
+    border: $color-main;
+  }
+}
+.footer__butten {
+  padding: 15px 30px;
+  @media (max-width: 688px) {
+    padding: 15px 17px;
+  }
+}
+
+.feedback__button {
+  padding: 9.5px 60px;
+}
+.popup_button {
+  padding: 9.5px 65px;
+  margin-top: 12px;
+}

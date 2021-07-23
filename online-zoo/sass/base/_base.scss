@@ -1,0 +1,45 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  @extend %font-add;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  display: none;
+}
+
+@font-face {
+  font-family: SceneW01-Black;
+  src: url(./../fonts/12309.ttf);
+}
+
+h2 {
+  font-family: SceneW01-Black;
+  @include font($size: 70px, $weight: 900, $height: 120%);
+  @include madia-mobile {
+    @include font($size: 50px, $weight: 900, $height: 120%);
+  }
+  @include madia-mobilesmall {
+    @include font($size: 50px, $weight: 900, $height: 120%);
+    letter-spacing: 0.03em;
+  }
+}
+h3 {
+  @include font($size: 40px, $weight: 500, $height: 47px);
+}
+h4 {
+  @include font($size: 16px, $weight: 500, $height: 120%);
+}
+.cost {
+  @include font($size: 12px, $weight: 500, $height: 14px);
+}

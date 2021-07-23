@@ -1,0 +1,107 @@
+.testimonials {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  &__title {
+    margin-bottom: 80px;
+    margin-top: 11px;
+    text-align: center;
+  }
+  &__slider {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1160px;
+    flex-wrap: wrap;
+    @media screen and (max-width: 1180px) {
+      width: 1012px;
+    }
+    @media screen and (max-width: 1032px) {
+      width: 760px;
+    }
+    @media screen and (max-width: 780px) {
+      width: 621px;
+    }
+    @media screen and (max-width: 620px) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 300px;
+    }
+  }
+}
+.testimonials__button {
+  margin: 51px 0px 87px;
+}
+.pre-last-testimonial {
+  @media screen and (max-width: 1032px) {
+    display: none;
+  }
+}
+.last-testimonial {
+  @media screen and (max-width: 620px) {
+    display: none;
+  }
+}
+.slider-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  padding: 0px;
+  max-width: 1012px;
+  &__testimonial {
+    height: 369px;
+    width: 233px;
+    margin: 0 10px;
+    background-color: #a7e1ff;
+    @media screen and (max-width: 780px) {
+      width: 187px;
+      height: 429px;
+    }
+    @media screen and (max-width: 620px) {
+      width: 300px;
+      height: 229px;
+      margin: 10px;
+    }
+  }
+}
+
+.testimonial__text {
+  text-align: left;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.testimonial__user {
+  padding: 20px 0 0 20px;
+  display: flex;
+  align-items: flex-end;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.nickname-donate {
+  padding-left: 10px;
+}
+
+.user__donate {
+  padding-top: 5px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.user__donate img {
+  padding-right: 3px;
+}

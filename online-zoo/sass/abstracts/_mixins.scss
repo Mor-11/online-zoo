@@ -1,0 +1,57 @@
+@mixin font($size, $height, $weight, $style: normal) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $height;
+}
+@mixin img($height, $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin layout($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > * {
+    flex-basis: $width;
+  }
+}
+@mixin cards($position: relative, $z-index, $margin-left, $margin-right) {
+  position: $position;
+  margin-right: $margin-right;
+  z-index: $z-index;
+  margin-left: $margin-left;
+}
+
+@mixin madia-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+@mixin madia-mobile {
+  @media (max-width: $moblile-big-width) {
+    @content;
+  }
+}
+@mixin madia-mobilesmall {
+  @media (max-width: $moblile-small-width) {
+    @content;
+  }
+}
+@mixin min-madia-tablet {
+  @media (max-width: 1190px) {
+    @content;
+  }
+}
+@mixin max-madia-mobile {
+  @media (max-width: 639px) {
+    @content;
+  }
+}
+@mixin max-madia-tablet {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+

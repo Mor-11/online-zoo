@@ -1,0 +1,220 @@
+.close {
+  position: absolute;
+  right: 14px;
+  top: 12px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  &_popup {
+    right: 14px;
+    top: 11px;
+  }
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.cover {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.feedback {
+  @include img($height: 336px, $width: 470px);
+  margin-top: 10px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  text-align: center;
+  @media (max-width: 550px) {
+    @include img($height: 336px, $width: calc(100% - 60px));
+    margin: 0 auto;
+  }
+}
+.popup {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  @include img($height: 239px, $width: 470px);
+  text-align: center;
+  @media (max-width: 550px) {
+    @include img($height: 239px, $width: calc(100% - 60px));
+    margin: 0 auto;
+  }
+}
+
+.form-feedback {
+  @include img($height: 436px, $width: 630px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  top: calc(50vh - 218px);
+  left: calc(50vw - 315px);
+  background-color: white;
+  @include madia-mobile {
+    @include img($height: 436px, $width: calc(100% - 20px));
+    left: calc(50vw - calc(100% - 20px) / 2);
+  }
+}
+
+.popup_content {
+  @include img($height: 339px, $width: 630px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  top: calc(50vh - 170px);
+  left: calc(50vw - 315px);
+  background-color: white;
+  @include madia-mobile {
+    @include img($height: 339px, $width: calc(100% - 20px));
+    left: calc(50vw - calc(100% - 20px) / 2);
+  }
+}
+.animal_selection {
+  @include img($height: 39px, $width: 100%);
+  padding: 0 200px;
+  -webkit-appearance: none;
+  background: url(./../src/img/button/Vector.svg) #dff5b0 no-repeat 98% 50%;
+  cursor: pointer;
+  @media (max-width: 550px) {
+    padding: 0px 37%;
+  }
+}
+
+.amount {
+  text-align-last: center;
+  text-align: center;
+  margin-right: 6px;
+  @include img($height: 39px, $width: 303px);
+  border: 1px solid #9ca498;
+  @media (max-width: 550px) {
+    width: 64%;
+  }
+}
+.currency {
+  padding: 0px 63px;
+  @include img($height: 42px, $width: 159px);
+  border: 1px solid #9ca498;
+  -webkit-appearance: none;
+  @media (max-width: 550px) {
+    width: 32.5%;
+    padding: 0px 9%;
+  }
+}
+.your-text {
+  padding: 8px 0 0 10px;
+  @include img($height: 75px, $width: 100%);
+}
+
+.name,
+.email {
+  margin: 4px 0;
+  padding: 7px 0 0 10px;
+  @include img($height: 30px, $width: 460px);
+  background-color: #dff5b0;
+  border: 1px solid #9ca498;
+}
+.text-feedback {
+  margin: 4px 0 10px 0;
+  padding: 10px 0 0 10px;
+  @include img($height: 170px, $width: 460px);
+  background-color: #dff5b0;
+  border: 1px solid #9ca498;
+}
+
+.invalid {
+  background-color: #ff8d85;
+}
+
+.popup-card {
+  background-image: url(../../src/img/backgrounds/card.svg);
+  width: 630px;
+  height: 389px;
+  display: block;
+}
+.popup-card-len {
+  background-image: url(./../src/img/backgrounds/card.svg);
+  width: 630px;
+  height: 389px;
+  display: block;
+}
+.card-number {
+  margin: 84px 0px 0px 75px;
+  position: absolute;
+  @include img($height: 36px, $width: 302px);
+  text-align-last: center;
+  text-align: center;
+}
+
+.card-date {
+  position: relative;
+  @include img($height: 35px, $width: 74px);
+  text-align-last: center;
+  text-align: center;
+}
+.card-name {
+  position: absolute;
+  @include img($height: 35px, $width: 302px);
+  text-align-last: center;
+  text-align: center;
+  margin: 179px 0px 0px -165px;
+}
+
+.card-cvc {
+  margin: 173px 0px 0px 224px;
+  position: absolute;
+  @include img($height: 32px, $width: 71px);
+  text-align-last: center;
+  text-align: center;
+}
+.mm {
+  margin: 131px 0px 0px 75px;
+}
+
+.yy {
+  margin: 132px 0px 0px 6px;
+}
+#donate {
+  margin: 138px 2px 0px 222px;
+}
+
+.hidden {
+  display: none;
+}
+
+input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+.errow {
+  border-color: red;
+}

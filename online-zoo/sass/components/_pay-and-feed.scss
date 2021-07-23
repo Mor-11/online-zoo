@@ -1,0 +1,68 @@
+.pay-and-feed__titli {
+  padding: 100px 0px 80px 0px;
+  text-align: center;
+}
+
+.pay-dasktop__text {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  margin-top: -45px;
+  @include madia-mobile {
+    margin-top: -35px;
+  }
+  @media (max-width: 959px) {
+    width: 192px;
+  }
+  @include madia-mobilesmall {
+    margin-top: -39px;
+  }
+}
+.layout-3-column {
+  min-height: 470px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1090px;
+  margin: auto;
+  @media (max-width: 959px) {
+    max-width: 641px;
+  }
+  @media (max-width: 959px) {
+    background: url(../src/img/Pay-and-feed/lines_640.svg) no-repeat top;
+    background-position: 198% -328%;
+  }
+}
+
+.pay-dasktop {
+  margin: 0 auto;
+  @media (max-width: 639px) {
+    padding-bottom: 72px;
+  }
+}
+
+.pay-and-feed__wpapper {
+  background: url(../src/img/Pay-and-feed/lines.svg) no-repeat top;
+  background-position: center center;
+  background-position-y: 30px;
+  @media (max-width: 1060px) {
+    background-position-x: 40%;
+  }
+  @media (max-width: 959px) {
+    background-image: none;
+  }
+  @media (max-width: 639px) {
+    background: url(../src/img/Pay-and-feed/lines_320.svg) no-repeat top;
+    background-position: center center;
+    background-position-y: 74%;
+  }
+}
+.pay-and-feed {
+  @media (max-width: 959px) {
+    padding-bottom: 198px;
+  }
+  @media (max-width: 639px) {
+    padding-bottom: 129px
+  }
+}
